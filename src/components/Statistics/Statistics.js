@@ -1,30 +1,15 @@
+import {Section, Item, Title, List, Label, Percentage} from './Statistics.style';
 
-export const Statistics = ({}) => (
-<section class="statistics">
-  <h2 class="title">Upload stats</h2>
-  <ul class="stat-list">
-    {statistics.map(statistic => 
-      <li class="item">
-        <span class="label">.docx</span>
-        <span class="percentage">4%</span>
-      </li>
-    )}
-    <li class="item">
-      <span class="label">.docx</span>
-      <span class="percentage">4%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp3</span>
-      <span class="percentage">14%</span>
-    </li>
-    <li class="item">
-      <span class="label">.pdf</span>
-      <span class="percentage">41%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp4</span>
-      <span class="percentage">12%</span>
-    </li>
-  </ul>
-</section>
+export const Statistics = ({statistics}) => (
+<Section>
+  <Title>Upload stats</Title>
+  <List>
+    {statistics.map(statistic => (
+      <Item key={statistic.id}>
+        <Label>{statistic.label}</Label>
+        <Percentage>{statistic.percentage}%</Percentage>
+      </Item>
+    ))}
+  </List>
+</Section>
 )
