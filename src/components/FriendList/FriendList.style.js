@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const List = styled.ul`
   display: flex;
+  padding: 0;
+  gap: 16px;
 `;
 
 export const Item = styled.li`
@@ -12,7 +14,7 @@ export const Item = styled.li`
   /* width: 180px; */
   padding: 12px;
   background-color: aliceblue;
-  margin: 8px;
+
 `;
 
 export const Status = styled.span`
