@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {Table, TableHeader, TableBody, Line, CellHeader, CellBody} from './TransactionHistory.style';
 
 export const TransactionHistory = ({transactions}) => (
@@ -20,4 +21,6 @@ export const TransactionHistory = ({transactions}) => (
   </TableBody>
 </Table>
 );
+
+
 
